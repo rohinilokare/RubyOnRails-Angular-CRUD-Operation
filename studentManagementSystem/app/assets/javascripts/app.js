@@ -8,5 +8,11 @@ angular
   templateUrl: 'main/_home.html',
   controller: 'MainCtrl'
   })
-  $urlRouterProvider.otherwise('home');
+
+  .state('new', {
+  url: '/new',
+  templateUrl: 'main/create_new.html',
+  controller: 'MainCtrl'
+  });
+  $urlRouterProvider.otherwise('new');
  }])
