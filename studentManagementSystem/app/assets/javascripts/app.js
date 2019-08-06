@@ -6,13 +6,13 @@ angular
   .state('home', {
   url: '/home',
   templateUrl: 'main/_home.html',
-  controller: 'MainCtrl'
+  controller: 'AddCtrl'
   })
 
   .state('new', {
   url: '/new',
   templateUrl: 'main/create_new.html',
-  controller: 'MainCtrl'
+  controller: 'AddCtrl'
   });
   $urlRouterProvider.otherwise('new');
  }])

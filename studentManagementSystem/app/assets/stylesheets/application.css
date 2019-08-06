@@ -13,3 +13,27 @@
  *= require_tree .
  *= require_self
  */
+div.container
+{
+	position: relative;
+	width:50%;
+  border-radius:5px;
+  background-color:#ece7f0;
+  padding:20px;
+}
+input[type=text], select
+{
+  width:100%;
+  padding:12px 20px;
+  margin:8px 0;
+  display:block;
+  border:1px solid #ccc;
+  border-radius:4px;
+  box-sizing:border-box;
+}
+.addStudent
+{
+position: absolute;
+/*bottom: 10px;*/
+right :5px;
+}
