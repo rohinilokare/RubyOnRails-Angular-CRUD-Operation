@@ -4,26 +4,56 @@
   </head>
   <body>
     <h1>Students Listing Page</h1>
+<<<<<<< HEAD
     <div class="container">
       <table border="1px solid pink">
         <tr>
           <th>ID</th>
+=======
+    <div class="container" ng-app="app">
+      <table border="1px solid pink">
+        <tr>
+>>>>>>> 51d52c6dbb2813c3b5b91c003c6cba24213e60ee
           <th>Roll No.</th>
           <th>Name</th>
           <th>Address</th>
           <th>Standard</th>
+<<<<<<< HEAD
           <th>Operations</th>
         </tr>
         <tr ng-repeat="student in students">
           <td>{{student.id}}</td>
+=======
+        </tr>
+        <tr ng-repeat="student in students">
+>>>>>>> 51d52c6dbb2813c3b5b91c003c6cba24213e60ee
           <td>{{student.roll_no}}</td>
           <td>{{student.name}}</td>
           <td>{{student.address}}</td>
           <td>{{student.standard}}</td>
+<<<<<<< HEAD
           <td><input type=button value='show'><input type=button value='update' ng-model="students" ng-click="updateStudent()"><input type=button value='delete'></td>
+=======
+          <td><input type=button value='show'><input type=button value='update'><input type=button value='delete'></td>
+>>>>>>> 51d52c6dbb2813c3b5b91c003c6cba24213e60ee
         </tr>
       </table>
     </div>
     <a href="#/new">Add new student</a>
+<<<<<<< HEAD
+=======
+    <!-- <input type=button ng-click="showform=true" value= 'add new student'><br/>
+    <div class="container" ng-show="showform">
+      <h3>Roll No.</h3>
+      <input type="text" id="roll_no" placeholder="Rollnumber" ng-model="roll_no"/>
+      <h3>Student Name</h3>
+      <input type="text" id="name" placeholder="name" ng-model="name"/>
+      <h3>Address</h3>
+      <input type="text" id="address" placeholder="address" ng-model="address"/>
+      <h3>Standard</h3>
+      <input type="text" name="standard"placeholder="standard" ng-model="standard"/>
+      <button type="submit" class="addStudent" ng-click="addStudent()">Add student</button>
+    </div> -->
+>>>>>>> 51d52c6dbb2813c3b5b91c003c6cba24213e60ee
   </body>
 </html>
