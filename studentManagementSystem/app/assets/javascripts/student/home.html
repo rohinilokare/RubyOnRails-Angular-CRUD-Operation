@@ -1,0 +1,29 @@
+<html>
+  <head>
+    <title>Student list</title>
+  </head>
+  <body>
+    <h1>Students Listing Page</h1>
+    <div class="container">
+      <table border="1px solid pink">
+        <tr>
+          <th>ID</th>
+          <th>Roll No.</th>
+          <th>Name</th>
+          <th>Address</th>
+          <th>Standard</th>
+          <th>Operations</th>
+        </tr>
+        <tr ng-repeat="student in students">
+          <td>{{student.id}}</td>
+          <td>{{student.roll_no}}</td>
+          <td>{{student.name}}</td>
+          <td>{{student.address}}</td>
+          <td>{{student.standard}}</td>
+          <td><input type=button value='show'><input type=button value='update' ng-model="students" ng-click="updateStudent()"><input type=button value='delete'></td>
+        </tr>
+      </table>
+    </div>
+    <a href="#/new">Add new student</a>
+  </body>
+</html>

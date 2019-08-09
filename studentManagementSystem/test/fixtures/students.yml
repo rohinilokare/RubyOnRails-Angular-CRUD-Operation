@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  roll_no: 
+  name: 
+  address: 
+  standard: 
+
+two:
+  roll_no: 
+  name: 
+  address: 
+  standard: 
