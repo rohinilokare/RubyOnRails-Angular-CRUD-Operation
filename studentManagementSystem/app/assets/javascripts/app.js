@@ -9,10 +9,16 @@ angular
   controller: 'AddCtrl'
   })
 
+  .state('students', {
+  url: '/students',
+  templateUrl: 'student/home.html',
+  controller: 'AddCtrl'
+  })
+
   .state('new', {
   url: '/new',
-  templateUrl: 'main/create_new.html',
+  templateUrl: 'student/create_new.html',
   controller: 'AddCtrl'
   });
-  $urlRouterProvider.otherwise('new');
+  $urlRouterProvider.otherwise('home');
  }])
