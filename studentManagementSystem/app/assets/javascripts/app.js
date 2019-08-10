@@ -19,6 +19,18 @@ angular
   url: '/new',
   templateUrl: 'student/create_new.html',
   controller: 'AddCtrl'
+  })
+
+  .state('edit', {
+  url: '/edit',
+  templateUrl: 'student/update.html',
+  controller: 'AddCtrl'
+  })
+
+  .state('show', {
+  url: '/show',
+  templateUrl: 'student/show.html',
+  controller: 'AddCtrl'
   });
   $urlRouterProvider.otherwise('students');
  }])

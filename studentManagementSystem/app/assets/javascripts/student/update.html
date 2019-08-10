@@ -1,0 +1,22 @@
+ <!DOCTYPE html>
+ <html>
+ <head>
+   <title>Edit Student Record</title>
+ </head>
+  <body ng-app="app">
+    <div class="container">
+    <h4>Roll No.</h4>
+    <input type="text" id="roll_no" placeholder="Rollnumber" ng-model="roll_no"/>
+    <h3>Student Name</h3>
+    <input type="text" id="name" placeholder="name" ng-model="name"/>
+    <h3>Address</h3>
+    <input type="text" id="address" placeholder="address" ng-model="address"/>
+    <h3>Standard</h3>
+    <input type="text" name="standard"placeholder="standard" ng-model="standard"/>
+    <a href="#/students"><button type="submit" class="addStudent" ng-click="addStudent()"><h3>Update student</h3></button></a>
+    </div>
+    <div>
+      <a href="#/students"><button class="addStudent"><h3>Back</h3></button></a>
+    </div>
+  </body>
+ </html>

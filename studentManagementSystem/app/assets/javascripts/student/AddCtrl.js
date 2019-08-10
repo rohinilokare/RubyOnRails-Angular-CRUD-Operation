@@ -26,22 +26,23 @@ app.controller('AddCtrl', ['$scope','$http', function($scope,$http) {
     });
   }
 
-  $scope.updateStudent = function(){
-    $scope.student = {
-      roll_no: $scope.roll_no,
-      name: $scope.name,
-      address: $scope.address,
-      standard: $scope.standard
-    };
-    console.log('upd data',$scope);
+  $scope.showStudent = function(student){
+    $scope.show_student = student;
+    console.log($scope.show_student);
+  }
+
+  $scope.editStudent = function(student){
+    $scope.edit_student =student
+  }
+  $scope.updateStudent = function(student){
     console.log('update id ',student.id);
-    $http.put('/students'+student.id+'.json',student).error(function(data){
-     alert('enter valid')}).then(function(response){
+    $http.put('/students/'+student.id+'.json',student).error(function(data){
+     alert('Error,plz try again')}).then(function(response){
        return response.data;
        console.log('update',response.data);
      });
   }
 
 $scope.getData();
-
+$scope.showStudent();
 }]);

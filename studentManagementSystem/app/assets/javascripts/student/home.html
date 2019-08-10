@@ -20,10 +20,11 @@
           <td>{{student.name}}</td>
           <td>{{student.address}}</td>
           <td>{{student.standard}}</td>
-          <td><input type=button value='show'><input type=button value='update' ng-model="students" ng-click="updateStudent()"><input type=button value='delete'></td>
+          <td><a href="#/show"><input type=button value='Show' ng-click="showStudent(student)"></a><a href="#/edit"><input type=button value='Update'></a><a href="#/delete"><input type=button value='Delete'></a></td>
         </tr>
       </table>
     </div>
-    <a href="#/new">Add new student</a>
+    <a href="#/new"><button type="submit"><h3>Add New student</h3></button></a>
+    </div></a>
   </body>
 </html>
