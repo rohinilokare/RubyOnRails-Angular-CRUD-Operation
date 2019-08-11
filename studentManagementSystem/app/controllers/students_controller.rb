@@ -25,6 +25,7 @@ class StudentsController < ApplicationController
   def destroy
     @students = Student.find(params[:id])
     @students.destroy
+    render json: @students
   end
 
 	private

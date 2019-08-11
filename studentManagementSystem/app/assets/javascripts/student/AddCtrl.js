@@ -35,6 +35,7 @@ app.controller('AddCtrl', ['$scope','$http', function($scope,$http) {
   $scope.deleteStudent = function(student){
     $http.delete('/students/'+student.id+'.json',student).success(function(data){
     });
+    $scope.getData();
   }
 
   $scope.editStudent = function(student){
