@@ -10,11 +10,21 @@ class StudentsController < ApplicationController
 		student.save
 	end
 
+	def show
+		student = Student.find((params[:id]))
+		render	json: student
+	end
+
   def update
     @students = Student.find(params[:id])
     if @students.update(student_params)
       render json: @students
     end
+  end
+
+  def destroy
+    @students = Student.find(params[:id])
+    @students.destroy
   end
 
 	private

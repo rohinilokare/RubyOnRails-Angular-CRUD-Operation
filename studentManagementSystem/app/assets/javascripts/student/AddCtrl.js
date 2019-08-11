@@ -21,14 +21,20 @@ app.controller('AddCtrl', ['$scope','$http', function($scope,$http) {
     $scope.address = '';
     $scope.standard = '';
 
-    $http.post('/students.json',student).success(function (data) {
-      $scope.students.push(data);
+    $http.post('/students.json',student).success(function(data){
     });
   }
 
   $scope.showStudent = function(student){
-    $scope.show_student = student;
-    console.log($scope.show_student);
+    $http.get('/students/'+student.id+'.json',student).success(function(data){
+      $scope.show_student = data;
+      console.log($scope.show_student);
+    });
+  }
+
+  $scope.deleteStudent = function(student){
+    $http.delete('/students/'+student.id+'.json',student).success(function(data){
+    });
   }
 
   $scope.editStudent = function(student){
@@ -44,5 +50,4 @@ app.controller('AddCtrl', ['$scope','$http', function($scope,$http) {
   }
 
 $scope.getData();
-$scope.showStudent();
 }]);
