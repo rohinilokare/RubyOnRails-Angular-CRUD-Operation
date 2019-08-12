@@ -11,7 +11,7 @@ class StudentsController < ApplicationController
 	end
 
 	def show
-		student = Student.find((params[:id]))
+		student = Student.find(params[:id])
 		render	json: student
 	end
 
@@ -23,14 +23,14 @@ class StudentsController < ApplicationController
   end
 
   def destroy
-    @students = Student.find(params[:id])
-    @students.destroy
+    students = Student.find(params[:id])
+    students.destroy
     render json: @students
   end
 
 	private
 		def student_params
-			params.require(:student).permit(:roll_no, :name, :address, :standard)
+			params.require(:student).permit(:id, :roll_no, :name, :address, :standard)
 		end
 
 end

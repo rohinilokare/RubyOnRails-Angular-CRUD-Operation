@@ -1,25 +1,24 @@
 <html>
 	<body>
-		<h1> student</h1>
-		{{show_student}}
+		<h1>Record of student id = {{show_student.id}}</h1>
 		<table border="2">
 			<tr>
 				<th>ID</th>
-			  <th><strong>RollNo:</strong></th>
-			  <th><strong>StudenName:</strong></th>
-			  <th><strong>Address:</strong></th>
-			  <th><strong>Standard:</strong></th>
+				<th><strong>RollNo:</strong></th>
+				<th><strong>StudenName:</strong></th>
+				<th><strong>Address:</strong></th>
+				<th><strong>Standard:</strong></th>
 			</tr>
 			<tr>
 				<td>{{show_student.id}}</td>
-			  <td>{{show_student.roll_no}}</td>
-			  <td>{{show_student.name}}</td>
-			  <td>{{show_student.address}}</td>
-			  <td>{{show_student.standard}}</td>
+				<td>{{show_student.roll_no}}</td>
+				<td>{{show_student.name}}</td>
+				<td>{{show_student.address}}</td>
+				<td>{{show_student.standard}}</td>
 			</tr>
 		</table>
-    <div>
-      <a href="#/students"><button class="addStudent"><h3>Back</h3></button></a>
-    </div>
+		<div>
+		<a href="#/students"><button class="addStudent"><h3>Back</h3></button></a>
+		</div>
 	</body>
 </html>

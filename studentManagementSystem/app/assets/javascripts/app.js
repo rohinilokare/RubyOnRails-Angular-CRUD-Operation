@@ -3,34 +3,28 @@ angular
  .config(['$stateProvider', '$urlRouterProvider',
  function($stateProvider, $urlRouterProvider) {
  $stateProvider
-  // .state('home', {
-  // url: '/home',
-  // templateUrl: 'main/_home.html',
-  // controller: 'AddCtrl'
-  // })
-
   .state('students', {
   url: '/students',
   templateUrl: 'student/home.html',
-  controller: 'AddCtrl'
+  controller: 'StudentsCtrl'
   })
 
   .state('new', {
   url: '/new',
-  templateUrl: 'student/create_new.html',
-  controller: 'AddCtrl'
+  templateUrl: 'student/new.html',
+  controller: 'StudentsCtrl'
   })
 
   .state('edit', {
-  url: '/edit',
-  templateUrl: 'student/update.html',
-  controller: 'AddCtrl'
+  url: '/:id/edit',
+  templateUrl: 'student/new.html',
+  controller: 'UpdateCtrl'
   })
 
   .state('show', {
-  url: '/show',
+  url: '/:id',
   templateUrl: 'student/show.html',
-  controller: 'AddCtrl'
+  controller: 'ShowCtrl'
   });
   $urlRouterProvider.otherwise('students');
  }])
